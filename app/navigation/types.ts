@@ -6,5 +6,6 @@ export type TypeRootStackParamList = {
     Support: undefined
     Payments: undefined
     More: undefined
-    
+    Transfers: undefined
+    CardTransfer: undefined
 }

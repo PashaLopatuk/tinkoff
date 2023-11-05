@@ -1,8 +1,11 @@
 import {StyleSheet} from 'react-native';
+import { UI_BG } from '../../../../styles';
 
 export default StyleSheet.create({
   container: {
     marginBottom: 16,
+    backgroundColor: UI_BG,
+    borderRadius: 15
   },
   item: {
     width: 56,

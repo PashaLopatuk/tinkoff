@@ -8,11 +8,14 @@ import Search from '../../ui/search/Search';
 import Services from './Services/Services'
 
 const Home: FC = () => {
+
+  const searhIcon = require('../../../../assets/icons/search.svg');
+
   return (
     <Layout>
       <Header />
-      <Search />
-      <Stories />
+      <Search icon={searhIcon}/>
+        <Stories />
       <Services />
       <Accounts />
       <ApplyNewProducts />

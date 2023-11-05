@@ -6,20 +6,21 @@ import Header from './Header';
 import Message from './Message';
 import {useMessages} from '../../../hooks/useMessages';
 import InputField from './InputField';
+import tw from 'twrnc'
 
 const Support: FC = () => {
   const {messages} = useMessages();
 
   return (
     <Layout isScrollView={false}>
-      <Padding>
+      <Padding style={tw`mt-10`}>
         <Header />
         <ScrollView style={{height: '83%'}}>
           {messages.map(message => (
             <Message key={message._id} message={message} />
           ))}
         </ScrollView>
-        <InputField />
+        <InputField/>
       </Padding>
     </Layout>
   );

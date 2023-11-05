@@ -21,7 +21,7 @@ const Operations = () => {
         <Text style={tw`font-medium text-neutral-700`}>Spents in {months[new Date().getMonth()]}</Text>
         <Text style={tw`font-medium text-neutral-700`}>{accounts[0]?.ballance - 100} {accounts[0]?.currency === 'RUB' ? '₽' : '$'} </Text>
       </View>
-      <View style={tw`w-[100%] h-3 rounded bg-neutral-300`}></View>
+      <View style={tw`w-[100%] h-2 rounded-xl bg-neutral-300`}></View>
 
     </View>
   )

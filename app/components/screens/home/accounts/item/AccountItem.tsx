@@ -1,27 +1,47 @@
-import { View, Text } from 'react-native'
+import {View, Text, Pressable} from 'react-native'
 import React from 'react'
-import { IAccount } from '../types'
+import {IAccount} from '../types'
 import tw from 'twrnc'
 
 import Currency from './Currency'
 import Ballance from './Ballance'
 import ImageCart from './ImageCart'
 import Crown from './Crown'
+import {asyncAlert} from "./asyncAlert";
+import {handleBalanceChange} from "./handleBalanceChange";
 
-const AccountItem: React.FC<{ account: IAccount }> = ({ account }) => {
-  React.useEffect(() => console.log(account), [account])
+const AccountItem: React.FC<{ account: IAccount }> = ({account}) => {
+    React.useEffect(() => console.log(account), [account])
 
-  return (
-    <View style={tw`flex-row items-start justify-between bg-white rounded-xl p-4`}>
-      <View style={tw`flex-row gap-3`}>
-        <Currency currency={account.currency} />
+    const handleTouch = () => {
+        // asyncAlert(
+        //     {
+        //         title: '',
+        //         msg: '',
+        //         buttons: {
+        //             text: '',
+        //             resolveValue: '',
+        //             textSecond: '',
+        //             resolveValueSecond: '',
+        //         }
+        //     }
+        // )
+        handleBalanceChange(account, account.cardNumber)
+    }
 
-        <Ballance account={account} />
-      </View>
-      <Crown/>
+    return (
+        <Pressable
+            style={tw`flex-row items-start justify-between bg-white rounded-xl p-4`}
+            onPress={handleTouch}
+        >
+            <View style={tw`flex-row gap-3`}>
+                <Currency currency={account.currency}/>
+                <Ballance account={account}/>
+            </View>
+            <Crown/>
 
-    </View>
-  )
+        </Pressable>
+    )
 }
 
 export default AccountItem

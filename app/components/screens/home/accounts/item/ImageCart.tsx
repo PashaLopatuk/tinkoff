@@ -3,7 +3,7 @@ import React from 'react'
 import { IAccount } from '../types'
 import tw from 'twrnc'
 
-const ImageCart: React.FC<IAccount> = (account) => {
+const ImageCart = ({account} : {account: IAccount}) => {
 
   const imageBlack: ImageSourcePropType = require('../../../../../../assets/cards/tinkoff-black.png')
   const imageAirlines: ImageSourcePropType = require('../../../../../../assets/cards/tinkoff-airlines.png')
@@ -19,7 +19,6 @@ const ImageCart: React.FC<IAccount> = (account) => {
     >
       <View>
         <Text style={{ ...tw`text-white font-medium`, fontSize: 11 }}>
-          0000
           {account.cardNumber?.slice(-4)}
         </Text>
       </View>

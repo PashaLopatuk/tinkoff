@@ -1,12 +1,13 @@
-import {Alert, Pressable, Text, TextInput, View} from 'react-native';
+import {Alert, Pressable, Text, TextInput, View, ViewStyle} from 'react-native';
 import {FC, useState} from 'react';
 import {useAuth} from '../../../../hooks/useAuth';
 import styles from './styles';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import {addDoc, collection, serverTimestamp} from 'firebase/firestore';
 import {db} from '../../../../firebase';
+// import Style from 'twrnc';
 
-const InputField: FC = () => {
+const InputField: FC = ({style={}}: {style?: ViewStyle}) => {
   const {user} = useAuth();
   const [message, setMessage] = useState('');
 

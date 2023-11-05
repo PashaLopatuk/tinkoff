@@ -5,7 +5,7 @@ import Svg, { Path, G } from 'react-native-svg';
 
 const Crown = () => {
     return (
-        <View style={tw`px-2 py-1 bg-neutral-600 rounded-2xl flex-row gap-1 items-center`}>
+        <View style={tw`px-2 py-[0.1rem] bg-neutral-700 rounded-2xl flex-row gap-1 items-center`}>
             {/* <Svg
                 style={tw`max-w-9 max-h-9 object-contain`}
                 xmlns="http://www.w3.org/2000/svg" width={128} height={128}>

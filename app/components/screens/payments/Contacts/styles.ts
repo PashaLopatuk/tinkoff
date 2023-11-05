@@ -5,6 +5,6 @@ export default StyleSheet.create({
     backgroundColor: 'white'
   },
   scrollView: {
-    paddingVertical: 16,
+    // paddingVertical: 16,
   },
 });

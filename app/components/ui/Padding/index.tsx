@@ -7,7 +7,7 @@ interface IPadding {
 }
 
 const Padding: FC<PropsWithChildren<IPadding>> = ({children, style}) => {
-  return <View style={[styles.root, style]}>{children}</View>;
+  return <View style={{...styles.root, ...style}}>{children}</View>;
 };
 
 export default Padding;

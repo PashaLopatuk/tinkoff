@@ -35,16 +35,16 @@ export const handleTransfer = async (
     const docRefTo = doc(db, 'accounts', accountToId);
     const docSnapTo = await getDoc(docRefTo);
 
-    if (docSnapTo.exists()) {
-        currentToBalance = docSnapTo.data().ballance;
-    } else {
-        Alert.alert('The card where you are sending money was not found');
-        return;
-    }
+    // if (docSnapTo.exists()) {
+    //     currentToBalance = docSnapTo.data().ballance;
+    // } else {
+    //     Alert.alert('The card where you are sending money was not found');
+    //     return;
+    // }
 
-    await updateDoc(docRefTo, {
-        balance: currentToBalance + Number(amount),
-    });
+    // await updateDoc(docRefTo, {
+    //     balance: currentToBalance + Number(amount),
+    // });
 
     const docRefFrom = doc(db, 'accounts', fromAccount._id);
 

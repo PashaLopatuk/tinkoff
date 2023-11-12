@@ -20,7 +20,7 @@ const CardTransfer = () => {
     const [amount, setAmount] = useState<number | undefined>()
 
     const handleTouch = () => {
-        handleTransfer(selectedAccount, sendTo)
+        // handleTransfer(selectedAccount, sendTo)
     }
 
     return (

@@ -16,7 +16,7 @@ const Footer: React.FC<IFooter> = ({navigate, currentRoute}) => {
     return (
         <Padding
             style={{
-                ...tw`flex-row justify-between items-center w-full bg-gray-800 px-0 pb-9 pt-2`,
+                ...tw`flex-row justify-between items-center w-full bg-gray-800 px-0 pb-7 pt-3`,
                 borderTopColor: '#E1E1E1',
                 borderTopWidth: 1,
             }}

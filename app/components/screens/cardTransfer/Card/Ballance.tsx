@@ -5,7 +5,10 @@ import tw from 'twrnc'
 import ImageCart from './ImageCart'
 
 function formatBankBalance(balance: number) {
-    return balance !== undefined ? balance.toLocaleString('uk-UA', {style: 'currency', currency: 'USD'}).slice(0, -3) : ''
+    return balance !== undefined ? balance.toLocaleString('uk-UA', {
+        style: 'currency',
+        currency: 'USD'
+    }).slice(0, -3) : ''
 }
 
 
@@ -21,7 +24,7 @@ const Ballance = ({account}: { account: IAccount }) => {
                 {currency === 'RUB' ? '₽' : '$'}
             </Text>
             <Text style={{fontSize: 15, ...tw`text-neutral-700 mb-2 text-md`}}>{name}</Text>
-            <ImageCart account={account}/>
+            {/*<ImageCart account={account}/>*/}
         </View>
     )
 }

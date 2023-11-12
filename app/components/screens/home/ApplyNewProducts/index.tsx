@@ -39,7 +39,7 @@ const ApplyNewProducts = () => {
       await addDoc(collection(db, 'accounts'), {
         timestamp: serverTimestamp(),
         userId: user?.uid,
-        ballance: 0,
+        balance: 0,
         cardNumber: getRandomCardNumber(),
         currency,
         name: cardType,

@@ -26,7 +26,7 @@ const AccountItem: React.FC<{ account: IAccount }> = ({account}) => {
         //         }
         //     }
         // )
-        handleBalanceChange(account, account.cardNumber)
+        handleBalanceChange(account)
     }
 
     return (

@@ -16,6 +16,7 @@ export const handleBalanceChange = async (
     account: IAccount,
     // cardNumber: string,
 ) => {
+    console.log('Change balance')
     Alert.prompt('Change balance', 'Enter the new balance amount', async sum => {
         try {
             let accountToId = '';

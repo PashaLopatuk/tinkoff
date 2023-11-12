@@ -12,6 +12,8 @@ import Profile from '../components/screens/profile/Profile'
 import Footer from '../components/layout/footer/Footer'
 import Transfers from "../components/screens/transfers/Transfers";
 import CardTransfer from "../components/screens/cardTransfer/CardTransfer";
+import Operations from '../components/screens/ operations/Operations'
+
 // import Layout from '../components/ui/Layout/Layout'
 // import Margin from '../components/ui/GeneralMargin/Margin'
 
@@ -47,8 +49,11 @@ const Navigation = () => {
                         (
                             <>
                                 <Stack.Screen name='Home' component={Home}></Stack.Screen>
+
                                 <Stack.Screen name='Payments' component={Payments}></Stack.Screen>
-                                <Stack.Screen name={'CardTransfer'} component={CardTransfer}></Stack.Screen>
+                                <Stack.Screen name='CardTransfer' component={CardTransfer}></Stack.Screen>
+                                <Stack.Screen name='Operations' component={Operations}></Stack.Screen>
+
                                 <Stack.Screen name='Services' component={Services}></Stack.Screen>
                                 <Stack.Screen name='Support' component={Support}></Stack.Screen>
                                 <Stack.Screen name='More' component={More}></Stack.Screen>
